@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Sorteio extends Model
+class UserSorteio extends Model
 {
     use HasFactory;
-    protected $fillable=['user_id_1', 'user_id_2'];
+    protected $fillable=['data'];
     public function user () {
-        return $this -> belongsToMany('App\Models\User', 'UserSorteio');
+        return $this -> belongsToMany('App\Models\User');
     }
 }

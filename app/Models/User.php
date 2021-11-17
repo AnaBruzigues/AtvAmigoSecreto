@@ -26,7 +26,7 @@ class User extends Authenticatable
         return $this -> hasMany('App\Models\Presente');
     }
     public function sorteio () {
-        return $this -> hasMany('App\Models\Sorteio');
+        return $this -> belongsToMany('App\Models\Sorteio', 'UserSorteio');
     } 
 
     /**
